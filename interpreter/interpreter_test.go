@@ -1,10 +1,5 @@
 // Test interpreter package
 
-// If you want to run tests against both the Go version of the interpreter
-// (default) and the davi version, use a command line like:
-//
-// go test davi/interpreter -exe ~/go/src/davi/davi -interp ~/go/src/davi/davi.ll
-
 package interpreter_test
 
 import (
