@@ -1,0 +1,27 @@
+<?davi
+// Function and Variable Declaration
+i = 1
+function noChange() {
+    i = 5
+    echo(i)
+}
+echo(i)
+noChange()
+echo(i)
+?>
+
+<h1> Hello World </h1>
+
+<p> Calc of 2 + 2 = <?davi echo(2 + 2) ?> </p>
+
+<?davi
+// If statement
+a = 10
+if a > 5 {
+    echo("large")
+} else if a < 0 {
+    echo("negative")
+} else {
+    echo("small")
+}
+?>
