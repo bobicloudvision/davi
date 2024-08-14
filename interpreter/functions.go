@@ -87,7 +87,7 @@ var builtins = map[string]builtinFunction{
 	"join":   {joinFunc, "join"},
 	"len":    {lenFunc, "len"},
 	"lower":  {lowerFunc, "lower"},
-	"print":  {printFunc, "print"},
+	"echo":   {echoFunc, "echo"},
 	"range":  {rangeFunc, "range"},
 	"read":   {readFunc, "read"},
 	"rune":   {runeFunc, "rune"},
@@ -229,7 +229,7 @@ func lowerFunc(interp *interpreter, pos Position, args []Value) Value {
 	panic(typeError(pos, "lower() requires a str"))
 }
 
-func printFunc(interp *interpreter, pos Position, args []Value) Value {
+func echoFunc(interp *interpreter, pos Position, args []Value) Value {
 	strs := make([]interface{}, len(args))
 	for i, a := range args {
 		strs[i] = toString(a, false)
