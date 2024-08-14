@@ -87,7 +87,7 @@ func (p *parser) statement() Statement {
 		return p.for_()
 	case RETURN:
 		return p.return_()
-	case FUNC:
+	case FUNCTION:
 		return p.func_()
 	}
 	pos := p.pos
@@ -165,11 +165,11 @@ func (p *parser) return_() Statement {
 	return &Return{pos, result}
 }
 
-// func = FUNC NAME params block |
-//        FUNC params block
+// func = FUNCTION NAME params block |
+//        FUNCTION params block
 func (p *parser) func_() Statement {
 	pos := p.pos
-	p.expect(FUNC)
+	p.expect(FUNCTION)
 	if p.tok == NAME {
 		name := p.val
 		p.next()
@@ -334,7 +334,7 @@ func (p *parser) call() Expression {
 }
 
 // primary = NAME | INT | STR | TRUE | FALSE | NIL | list | map |
-//           FUNC params block |
+//           FUNCTION params block |
 //           LPAREN expression RPAREN
 func (p *parser) primary() Expression {
 	switch p.tok {
@@ -374,7 +374,7 @@ func (p *parser) primary() Expression {
 		return p.list()
 	case LBRACE:
 		return p.map_()
-	case FUNC:
+	case FUNCTION:
 		pos := p.pos
 		p.next()
 		args, ellipsis := p.params()

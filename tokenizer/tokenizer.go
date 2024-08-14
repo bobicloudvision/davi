@@ -61,7 +61,7 @@ const (
 	ELSE
 	FALSE
 	FOR
-	FUNC
+	FUNCTION
 	IF
 	IN
 	NIL
@@ -82,7 +82,7 @@ var keywordTokens = map[string]Token{
 	"else":   ELSE,
 	"false":  FALSE,
 	"for":    FOR,
-	"function":   FUNC,
+	"function":   FUNCTION,
 	"if":     IF,
 	"in":     IN,
 	"nil":    NIL,
@@ -126,7 +126,7 @@ var tokenNames = map[Token]string{
 	ELSE:   "else",
 	FALSE:  "false",
 	FOR:    "for",
-	FUNC:   "function",
+	FUNCTION:   "function",
 	IF:     "if",
 	IN:     "in",
 	NIL:    "nil",

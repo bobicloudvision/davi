@@ -58,9 +58,9 @@ func (f *userFunction) call(interp *interpreter, pos Position, args []Value) Val
 
 func (f *userFunction) name() string {
 	if f.Name == "" {
-		return "<func>"
+		return "<function>"
 	}
-	return fmt.Sprintf("<func %s>", f.Name)
+	return fmt.Sprintf("<function %s>", f.Name)
 }
 
 type builtinFunction struct {

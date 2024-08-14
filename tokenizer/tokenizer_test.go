@@ -137,7 +137,7 @@ func TestAll(t *testing.T) {
 			{1, 5, INT, "2"},
 		}},
 		{"func() {\n    return a+b\n}", []Info{
-			{1, 1, FUNC, ""},
+			{1, 1, FUNCTION, ""},
 			{1, 5, LPAREN, ""},
 			{1, 6, RPAREN, ""},
 			{1, 8, LBRACE, ""},
@@ -164,7 +164,7 @@ func TestAll(t *testing.T) {
 			{1, 5, ELSE, ""},
 			{1, 10, FALSE, ""},
 			{1, 16, FOR, ""},
-			{1, 20, FUNC, ""},
+			{1, 20, FUNCTION, ""},
 			{1, 25, IF, ""},
 			{1, 28, IN, ""},
 			{1, 31, NIL, ""},
